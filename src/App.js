@@ -3,19 +3,69 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="App">
+
+				<header className="App-header">
+					<h1 className="App-title">Fantastisk gruppeutstilling av gruppe 19</h1>
+					<div className="Settings-button">
+						<span> v </span>
+					</div>
+
+					<div className="Filters">
+						<div>
+							<form>
+								<fieldset>
+									<legend>Test</legend>
+									<input type="radio" name="text"/><label htmlFor="alt1">Alternativ 1</label>
+									<input type="radio" name="text"/><label htmlFor="alt2">Alternativ 2</label>
+									<input type="radio" name="text"/><label htmlFor="alt3">Alternativ 3</label>
+								</fieldset>
+							</form>
+						</div>
+						<div>
+							<form>
+								<fieldset>
+									<legend>Test</legend>
+									<input type="radio" name="text"/><label htmlFor="alt1">Alternativ 1</label>
+									<input type="radio" name="text"/><label htmlFor="alt2">Alternativ 2</label>
+									<input type="radio" name="text"/><label htmlFor="alt3">Alternativ 3</label>
+								</fieldset>
+							</form>
+						</div>
+						<div>
+							<form>
+								<fieldset>
+									<legend>Test</legend>
+									<input type="radio" name="text"/><label htmlFor="alt1">Alternativ 1</label>
+									<input type="radio" name="text"/><label htmlFor="alt2">Alternativ 2</label>
+									<input type="radio" name="text"/><label htmlFor="alt3">Alternativ 3</label>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+
+				</header>
+
+				<div className="Tab-bar">
+					<p>1</p>
+					<p>2</p>
+					<p>3</p>
+					<p>4</p>
+				</div>
+
+
+				<div>
+					<img src="header.jpg" />
+					<p>Lorem ipsum dolor sit amet, <br />consectetur adipisicing elit, <br />sed do eiusmod tempor incididunt ut labore et</p>
+				</div>
+
+				<button>Play music</button>
+
+			</div>
+		);
+	}
 }
 
 export default App;
