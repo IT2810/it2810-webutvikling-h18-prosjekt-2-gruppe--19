@@ -4,13 +4,17 @@
 }
 
 {
-	"title": "I går var det sommer"
+	"title": "I går var det sommer",
 	"poem": ["I dag er det ikke sommer, det er kjipt, uff"]
 }
 
 {
-	"title": "Sommer er det jeg vil jeg ha"
+	"title": "Sommer er det jeg vil jeg ha",
 	"poem": ["Gi meg det jeg vil ha, en dag med sol, det vil jeg gjerne ta"]
 }
 
+{
+    "title": "Det var såpass varmt ja",
+    "poem": ["Nå var det varmt, ja det var fryktelig varmt, svetter jeg"]
+}
 ]
