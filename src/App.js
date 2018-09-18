@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar.js';
 
 class App extends Component {
 	render() {
@@ -48,13 +49,7 @@ class App extends Component {
 
 				</header>
 
-				<div className="Tab-bar">
-					<p>1</p>
-					<p>2</p>
-					<p>3</p>
-					<p>4</p>
-				</div>
-
+                <NavBar/>
 
 				<div>
 					<img src="header.jpg" />
