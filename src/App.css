@@ -28,7 +28,7 @@
 }
 
 .Filters {
-  /* display: none; */
+  display: none;
 }
 
 img {
@@ -50,6 +50,26 @@ label {
   to { transform: rotate(360deg); }
 }
 
-@media screen and (max-width: 590px) and (min-width: 374px){
+@media screen and (min-width: 800px){
+  .Filters {
+    width: 300px;
+  }
+
+  .App {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  header {
+    grid-column: 1 / -1;
+  }
+
+  .Settings-button {
+    display: none;
+  }
+
+  .Filters {
+    display: block;
+  }
 
 }
