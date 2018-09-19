@@ -4,6 +4,10 @@ import NavBar from "./NavBar.js";
 import Selector from "./Selector.js";
 
 class App extends Component {
+  handleSelected = (option, category) => {
+    console.log({ option, category });
+  };
+
   render() {
     return (
       <div className="App">
@@ -18,18 +22,21 @@ class App extends Component {
 
         <section className="Filters">
           <Selector
+            onSelected={this.handleSelected}
             category="Figur"
             label1="Katt"
             label2="Hest"
             label3="Krokodille"
           />
           <Selector
+            onSelected={this.handleSelected}
             category="Musikk"
             label1="Gitar"
             label2="Techno"
             label3="Klassisk"
           />
           <Selector
+            onSelected={this.handleSelected}
             category="Dikt"
             label1="Vår"
             label2="Sommer"

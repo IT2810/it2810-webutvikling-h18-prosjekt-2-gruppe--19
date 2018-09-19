@@ -4,7 +4,7 @@ class Selector extends Component {
     super(props);
 
     this.state = {
-      value: "option1"
+      value: this.props.label1
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -14,6 +14,8 @@ class Selector extends Component {
     this.setState({
       value: event.target.value
     });
+
+    this.props.onSelected(event.target.value, this.props.category);
   }
 
   render() {
@@ -24,22 +26,22 @@ class Selector extends Component {
             <legend>{this.props.category}</legend>
             <input
               type="radio"
-              value="option1"
-              checked={this.state.value === "option1"}
+              value={this.props.label1}
+              checked={this.state.value === this.props.label1}
               onChange={this.handleChange}
             />
             <label>{this.props.label1}</label>
             <input
               type="radio"
-              value="option2"
-              checked={this.state.value === "option2"}
+              value={this.props.label2}
+              checked={this.state.value === this.props.label2}
               onChange={this.handleChange}
             />
             <label>{this.props.label2}</label>
             <input
               type="radio"
-              value="option3"
-              checked={this.state.value === "option3"}
+              value={this.props.label3}
+              checked={this.state.value === this.props.label3}
               onChange={this.handleChange}
             />
             <label>{this.props.label3}</label>
