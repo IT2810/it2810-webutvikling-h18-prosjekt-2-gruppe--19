@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./NavBar.js";
 import Selector from "./Selector.js";
+import Artboard from "./Artboard";
 
 class App extends Component {
   handleSelected = (option, category) => {
@@ -51,18 +52,13 @@ class App extends Component {
         </section>
 
         <section className="Art-section">
-          <NavBar />
-
-          <div>
-            <img src="header.jpg" alt="Art 1" />
-            <p>
-              Lorem ipsum dolor sit amet, <br />
-              consectetur adipisicing elit, <br />
-              sed do eiusmod tempor incididunt ut labore et
-            </p>
-          </div>
-
-          <button>Play music</button>
+			<NavBar />
+			<Artboard
+                image="Katt"
+                music="Gitar"
+                poem="Vår"
+                navbar="1"
+            />
         </section>
       </div>
     );
