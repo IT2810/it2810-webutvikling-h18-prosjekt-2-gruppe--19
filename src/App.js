@@ -8,6 +8,12 @@ class App extends Component {
     console.log({ option, category });
   };
 
+  state = { shouldHide: "true" };
+  
+  showHide = () => {
+  	this.setState({shouldHide: !this.state.shouldHide});
+  }
+
   render() {
     return (
       <div className="App">
@@ -15,12 +21,12 @@ class App extends Component {
           <h1 className="App-title">
             Fantastisk gruppeutstilling av gruppe 19
           </h1>
-          <div className="Settings-button">
-            <span> v </span>
+          <div className="Settings-button" onClick={this.showHide}>
+            <span>{this.state.shouldHide ? 'v' : '^'}</span>
           </div>
         </header>
 
-        <section className="Filters">
+        <section className="Filters" className={this.state.shouldHide ? 'hidden' : ''}>
           <Selector
             onSelected={this.handleSelected}
             category="Figur"
