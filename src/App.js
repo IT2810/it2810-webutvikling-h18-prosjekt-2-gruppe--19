@@ -17,9 +17,24 @@ class App extends Component {
         </header>
 
         <section className="Filters">
-          <Selector />
-          <Selector />
-          <Selector />
+          <Selector
+            category="Figur"
+            label1="Katt"
+            label2="Hest"
+            label3="Krokodille"
+          />
+          <Selector
+            category="Musikk"
+            label1="Gitar"
+            label2="Techno"
+            label3="Klassisk"
+          />
+          <Selector
+            category="Dikt"
+            label1="Vår"
+            label2="Sommer"
+            label3="Vinter"
+          />
         </section>
 
         <section className="Art-section">
