@@ -10,7 +10,7 @@ class Artboard extends Component {
 		this.getData();
 
 		this.state = {
-			image: null,
+			imagepath: null,
 			music: null,
 			poem: null
 		}
@@ -22,7 +22,6 @@ class Artboard extends Component {
 	
 	loadJson(path) {
 
-		console.log("test");
 		$.ajax({
 			url: path,
 			dataType: "json",
@@ -31,20 +30,41 @@ class Artboard extends Component {
 				this.updateState(data);
 			}.bind(this),
 			error: function(xhr, status, err) {
-				console.error("art_assets.json", status, err.toString());
+				console.error(path, status, err.toString());
+			}.bind(this)
+		});
+	}
+
+	loadSVG(path) {
+
+		$.ajax({
+			url: path,
+			dataType: "xml",
+			cache: false,
+			success: function(data) {
+				this.SVGParse(data);
+			}.bind(this),
+			error: function(xhr, status, err) {
+				console.error(path, status, err.toString());
 			}.bind(this)
 		});
 	}
 
 	updateState(data) {
-		console.log(data);
-		console.log(this.props.music);
 		this.setState({
-			image: this.byString(data, "images." + this.props.image)[parseInt(this.props.navbar)].path,
+			imagepath: this.byString(data, "images." + this.props.image)[parseInt(this.props.navbar)].path,
 			poem: this.byString(data, "poems." + this.props.poem)[parseInt(this.props.navbar)],
 			music: this.byString(data, "music." + this.props.music)[parseInt(this.props.navbar)]
 		});
 
+		this.loadSVG(this.state.imagepath);
+	}
+
+	SVGParse(xml) {
+		let element = new XMLSerializer().serializeToString(xml.documentElement);
+		this.setState({
+			imagexml: element
+		});
 	}
 
 	// http://jsfiddle.net/alnitak/hEsys/
@@ -65,22 +85,22 @@ class Artboard extends Component {
   
 
 	getData() {
-		// console.log(this.loadFile("art_assets.json"));
 		this.loadJson("art_assets.json");
 	}
-
-
-
 
 	render() {
 	return (
 		<div>
-			<img src={this.state.image} alt="Art 1" />
-			<p>
-				Data: { this.state.image }
-			</p>
 
-			<audio controls id="player" src="" type="audio/mpeg"></audio>
+			<h3>{ this.state.poem ? this.state.poem.title : 'Loading...' }</h3>
+			<p>By { this.state.poem ? this.state.poem.author : 'Loading...' }</p>
+
+			<p>{ this.state.poem ? this.state.poem.poem : 'Loading...' }</p>
+
+			<audio controls id="player" src={ this.state.music ? this.state.music.path : 'Loading...' } type="audio/mpeg"></audio>
+
+			{/* Livin' on the edge */}
+			<div dangerouslySetInnerHTML={{ __html: this.state.imagexml }} />
 		</div>
 		);
 	}
