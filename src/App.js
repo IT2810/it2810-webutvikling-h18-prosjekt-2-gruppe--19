@@ -6,14 +6,22 @@ import Artboard from "./Artboard";
 
 class App extends Component {
   handleSelected = (option, category) => {
-    console.log({ option, category });
+    if (category === "image") {
+      this.setState({ image: option });
+    }
+    if (category === "music") {
+      this.setState({ music: option });
+    }
+    if (category === "poem") {
+      this.setState({ poem: option });
+    }
   };
 
-  state = { shouldHide: "true" };
-  
+  state = { shouldHide: "true", image: "katter", music: "gitar", poem: "vår" };
+
   showHide = () => {
-  	this.setState({shouldHide: !this.state.shouldHide});
-  }
+    this.setState({ shouldHide: !this.state.shouldHide });
+  };
 
   render() {
     return (
@@ -23,11 +31,14 @@ class App extends Component {
             Fantastisk gruppeutstilling av gruppe 19
           </h1>
           <div className="Settings-button" onClick={this.showHide}>
-            <span>{this.state.shouldHide ? 'v' : '^'}</span>
+            <span>{this.state.shouldHide ? "v" : "^"}</span>
           </div>
         </header>
 
-        <section className="Filters" className={this.state.shouldHide ? 'hidden' : ''}>
+        <section
+          className="Filters"
+          className={this.state.shouldHide ? "hidden" : ""}
+        >
           <Selector
             onSelected={this.handleSelected}
             category="Figur"
@@ -52,13 +63,13 @@ class App extends Component {
         </section>
 
         <section className="Art-section">
-			<NavBar />
-			<Artboard
-                image="katter"
-                music="gitar"
-                poem="vår"
-                navbar="1"
-            />
+          <NavBar />
+          <Artboard
+            image={this.state.image}
+            music={this.state.music}
+            poem={this.state.poem}
+            navbar="1"
+          />
         </section>
       </div>
     );
