@@ -3,22 +3,22 @@
 
     "vår": [
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Vår",
         "poem": "Våren er her, jippi, kult, nais"
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Nå er det ikke så kaldt",
         "poem": "Vinteren er over, Bjørgen har lagt opp, det er ikke kaldt nå"
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Løvetann",
         "poem": "Er det bare jeg, som liker løvetann?"
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Fillern",
         "poem": "Ånei fillern, man kan ikke vinne, på flaxlodd, om våren, fillern ånei"
 
@@ -27,23 +27,23 @@
 
     "sommer": [
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Sommer",
         "poem": "Sommeren er rød, sommeren er blå, sommeren er alt jeg tenker på"
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "I går var det sommer",
         "poem": "I dag er det ikke sommer, det er kjipt, uff"
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Sommer er det jeg vil jeg ha",
         "poem": "Gi meg det jeg vil ha, en dag med sol, det vil jeg gjerne ta"
 
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Det var såpass varmt ja",
         "poem": "Nå var det varmt, ja det var fryktelig varmt, svetter jeg"
       }
@@ -51,22 +51,22 @@
 
     "vinter": [
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Vinter",
         "poem": "Vinteren er gul, og jaggu meg grå, alt jeg prøver å unngå"
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Uff det var kaldt",
         "poem": "Å huffameg, nå ble det kaldt, ikkje braaa"
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Hvor tok fuglene veien?",
         "poem": "Fuglene er borte, kanskje er de i, Spania?"
       },
       {
-        "author": "Pål Fosnes",
+        "author": "Pål Fossnes",
         "title": "Jette vekk",
         "poem": "La oss jette vekk, vekk fra kulden, vekk fra skolen, vekk fra juletiden"
       }
@@ -78,46 +78,46 @@
 
     "hester": [
       {
-        "path": "Hest1.svg"
+        "path": "assets/Hest1.svg"
       },
       {
-        "path": "Hest2.svg"
+        "path": "assets/Hest2.svg"
       },
       {
-        "path": "Hest3.svg"
+        "path": "assets/Hest3.svg"
       },
       {
-        "path": "Hest4.svg"
+        "path": "assets/Hest4.svg"
       }
     ],
 
     "katter": [
       {
-        "path": "katt1.svg"
+        "path": "assets/katt1.svg"
       },
       {
-        "path": "katt2.svg"
+        "path": "assets/katt2.svg"
       },
       {
-        "path": "katt3.svg"
+        "path": "assets/katt3.svg"
       },
       {
-        "path": "katt4.svg"
+        "path": "assets/katt4.svg"
       }
     ],
 
     "krokodiller": [
       {
-        "path": "Krokodille1.svg"
+        "path": "assets/Krokodille1.svg"
       },
       {
-        "path": "Krokodille2.svg"
+        "path": "assets/Krokodille2.svg"
       },
       {
-        "path": "Krokodille3.svg"
+        "path": "assets/Krokodille3.svg"
       },
       {
-        "path": "Krokodille4.svg"
+        "path": "assets/Krokodille4.svg"
       }
     ]
   },
@@ -126,45 +126,45 @@
 
     "gitar": [
       {
-        "path": "Hest1.svg"
+        "path": "assets/Hest1.svg"
       },
       {
-        "path": "Hest2.svg"
+        "path": "assets/Hest2.svg"
       },
       {
-        "path": "Hest3.svg"
+        "path": "assets/Hest3.svg"
       },
       {
-        "path": "Hest4.svg"
+        "path": "assets/Hest4.svg"
       }
     ],
     "klassisk": [
       {
-        "path": "Hest1.svg"
+        "path": "assets/Hest1.svg"
       },
       {
-        "path": "Hest2.svg"
+        "path": "assets/Hest2.svg"
       },
       {
-        "path": "Hest3.svg"
+        "path": "assets/Hest3.svg"
       },
       {
-        "path": "Hest4.svg"
+        "path": "assets/Hest4.svg"
       }
     ],
     "techno": [
       {
-        "path": "Hest1.svg"
+        "path": "assets/Hest1.svg"
       },
       {
-        "path": "Hest2.svg"
+        "path": "assets/Hest2.svg"
       },
       {
-        "path": "Hest3.svg"
+        "path": "assets/Hest3.svg"
       },
       {
-        "path": "Hest4.svg"
+        "path": "assets/Hest4.svg"
       }
-    ],
+    ]
   }
 }

@@ -54,9 +54,9 @@ class App extends Component {
         <section className="Art-section">
 			<NavBar />
 			<Artboard
-                image="Katt"
-                music="Gitar"
-                poem="Vår"
+                image="katter"
+                music="gitar"
+                poem="vår"
                 navbar="1"
             />
         </section>
