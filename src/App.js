@@ -26,7 +26,7 @@ class App extends Component {
     image: "katter",
     music: "gitar",
     poem: "vår",
-    nav: "1"
+    nav: "0"
   };
 
   showHide = () => {
@@ -52,33 +52,33 @@ class App extends Component {
           <Selector
             onSelected={this.handleSelected}
             category="image"
-            label1="Katt"
-            label2="Hest"
-            label3="Krokodille"
+            label1="katter"
+            label2="hester"
+            label3="krokodiller"
           />
           <Selector
             onSelected={this.handleSelected}
             category="music"
-            label1="Gitar"
-            label2="Techno"
-            label3="Klassisk"
+            label1="gitar"
+            label2="techno"
+            label3="klassisk"
           />
           <Selector
             onSelected={this.handleSelected}
             category="poem"
-            label1="Vår"
-            label2="Sommer"
-            label3="Vinter"
+            label1="vår"
+            label2="sommer"
+            label3="vinter"
           />
         </section>
 
         <section className="Art-section">
           <NavBar
             onSelected={this.handleTabSelected}
-            label1="1"
-            label2="2"
-            label3="3"
-            label4="4"
+            label1="0"
+            label2="1"
+            label3="2"
+            label4="3"
           />
           <Artboard
             image={this.state.image}

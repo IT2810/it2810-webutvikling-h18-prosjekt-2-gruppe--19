@@ -88,6 +88,10 @@ class Artboard extends Component {
 		this.loadJson("art_assets.json");
 	}
 
+	componentWillReceiveProps() {
+		this.getData();
+	}
+
 	render() {
 	return (
 		<div>
