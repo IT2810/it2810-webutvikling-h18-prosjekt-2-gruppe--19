@@ -1,18 +1,92 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import NavBar from "./NavBar.js";
+import Selector from "./Selector.js";
+import Artboard from "./Artboard";
 
 class App extends Component {
+  handleSelected = (option, category) => {
+    if (category === "image") {
+      this.setState({ image: option });
+    }
+    if (category === "music") {
+      this.setState({ music: option });
+    }
+    if (category === "poem") {
+      this.setState({ poem: option });
+    }
+  };
+
+  handleTabSelected = label => {
+    this.setState({ nav: label });
+  };
+
+  state = {
+    shouldHide: "true",
+    image: "katter",
+    music: "gitar",
+    poem: "vår",
+    nav: "1"
+  };
+
+  showHide = () => {
+    this.setState({ shouldHide: !this.state.shouldHide });
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">
+            Fantastisk gruppeutstilling av gruppe 19
+          </h1>
+          <div className="Settings-button" onClick={this.showHide}>
+            <span>{this.state.shouldHide ? "v" : "^"}</span>
+          </div>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <section
+          className="Filters"
+          className={this.state.shouldHide ? "hidden" : ""}
+        >
+          <Selector
+            onSelected={this.handleSelected}
+            category="image"
+            label1="Katt"
+            label2="Hest"
+            label3="Krokodille"
+          />
+          <Selector
+            onSelected={this.handleSelected}
+            category="music"
+            label1="Gitar"
+            label2="Techno"
+            label3="Klassisk"
+          />
+          <Selector
+            onSelected={this.handleSelected}
+            category="poem"
+            label1="Vår"
+            label2="Sommer"
+            label3="Vinter"
+          />
+        </section>
+
+        <section className="Art-section">
+          <NavBar
+            onSelected={this.handleTabSelected}
+            label1="1"
+            label2="2"
+            label3="3"
+            label4="4"
+          />
+          <Artboard
+            image={this.state.image}
+            music={this.state.music}
+            poem={this.state.poem}
+            navbar={this.state.nav}
+          />
+        </section>
       </div>
     );
   }

@@ -1,0 +1,164 @@
+{
+  "poems": {
+    "vår": [
+      {
+        "author": "Funky McGüllface",
+        "title": "Vår",
+        "poem": "Våren er her, jippi, kult, nais"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "Nå er det ikke så kaldt",
+        "poem": "Vinteren er over, Bjørgen har lagt opp, det er ikke kaldt nå"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "Løvetann",
+        "poem": "Er det bare jeg, som liker løvetann?"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "Fillern",
+        "poem": "Ånei fillern, man kan ikke vinne, på flaxlodd, om våren, fillern ånei"
+      }
+    ],
+
+    "sommer": [
+      {
+        "author": "Funky McGüllface",
+        "title": "Sommer",
+        "poem": "Sommeren er rød, sommeren er blå, sommeren er alt jeg tenker på"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "I går var det sommer",
+        "poem": "I dag er det ikke sommer, det er kjipt, uff"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "Sommer er det jeg vil jeg ha",
+        "poem": "Gi meg det jeg vil ha, en dag med sol, det vil jeg gjerne ta"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "Det var såpass varmt ja",
+        "poem": "Nå var det varmt, ja det var fryktelig varmt, svetter jeg"
+      }
+    ],
+
+    "vinter": [
+      {
+        "author": "Funky McGüllface",
+        "title": "Vinter",
+        "poem": "Vinteren er gul, og jaggu meg grå, alt jeg prøver å unngå"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "Uff det var kaldt",
+        "poem": "Å huffameg, nå ble det kaldt, ikkje braaa"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "Hvor tok fuglene veien?",
+        "poem": "Fuglene er borte, kanskje er de i, Spania?"
+      },
+      {
+        "author": "Funky McGüllface",
+        "title": "Jette vekk",
+        "poem": "La oss jette vekk, vekk fra kulden, vekk fra skolen, vekk fra juletiden"
+      }
+    ]
+  },
+
+  "images": {
+    "hester": [
+      {
+        "path": "assets/Hest1.svg"
+      },
+      {
+        "path": "assets/Hest2.svg"
+      },
+      {
+        "path": "assets/Hest3.svg"
+      },
+      {
+        "path": "assets/Hest4.svg"
+      }
+    ],
+
+    "katter": [
+      {
+        "path": "assets/katt1.svg"
+      },
+      {
+        "path": "assets/katt2.svg"
+      },
+      {
+        "path": "assets/katt3.svg"
+      },
+      {
+        "path": "assets/katt4.svg"
+      }
+    ],
+
+    "krokodiller": [
+      {
+        "path": "assets/Krokodille1.svg"
+      },
+      {
+        "path": "assets/Krokodille2.svg"
+      },
+      {
+        "path": "assets/Krokodille3.svg"
+      },
+      {
+        "path": "assets/Krokodille4.svg"
+      }
+    ]
+  },
+
+  "music": {
+    "gitar": [
+      {
+        "path": "assets/gitar1.mp3"
+      },
+      {
+        "path": "assets/gitar2.mp3"
+      },
+      {
+        "path": "assets/gitar3.mp3"
+      },
+      {
+        "path": "assets/gitar4.mp3"
+      }
+    ],
+    "klassisk": [
+      {
+        "path": "assets/klassisk1.mp3"
+      },
+      {
+        "path": "assets/klassisk2.mp3"
+      },
+      {
+        "path": "assets/klassisk3.mp3"
+      },
+      {
+        "path": "assets/klassisk4.mp3"
+      }
+    ],
+    "techno": [
+      {
+        "path": "assets/techno1.mp3"
+      },
+      {
+        "path": "assets/techno2.mp3"
+      },
+      {
+        "path": "assets/techno3.mp3"
+      },
+      {
+        "path": "assets/techno4.mp3"
+      }
+    ]
+  }
+}
