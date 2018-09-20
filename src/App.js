@@ -17,11 +17,17 @@ class App extends Component {
     }
   };
 
-  handleTabSelected = (label) => {
-    this.setState({ nav: label});
+  handleTabSelected = label => {
+    this.setState({ nav: label });
   };
 
-  state = { shouldHide: "true", image: "katter", music: "gitar", poem: "vår", nav: "1" };
+  state = {
+    shouldHide: "true",
+    image: "katter",
+    music: "gitar",
+    poem: "vår",
+    nav: "1"
+  };
 
   showHide = () => {
     this.setState({ shouldHide: !this.state.shouldHide });
@@ -45,21 +51,21 @@ class App extends Component {
         >
           <Selector
             onSelected={this.handleSelected}
-            category="Figur"
+            category="image"
             label1="Katt"
             label2="Hest"
             label3="Krokodille"
           />
           <Selector
             onSelected={this.handleSelected}
-            category="Musikk"
+            category="music"
             label1="Gitar"
             label2="Techno"
             label3="Klassisk"
           />
           <Selector
             onSelected={this.handleSelected}
-            category="Dikt"
+            category="poem"
             label1="Vår"
             label2="Sommer"
             label3="Vinter"
