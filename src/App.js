@@ -5,6 +5,7 @@ import Selector from "./Selector.js";
 import Artboard from "./Artboard";
 
 class App extends Component {
+  // Selector calls this method when a radio input is clicked and updates the relevant App states
   handleSelected = (option, category) => {
     if (category === "image") {
       this.setState({ image: option });
@@ -16,11 +17,11 @@ class App extends Component {
       this.setState({ poem: option });
     }
   };
-
+  // NavBar calls this method when a radio input is clicekd and updates the relevant App state
   handleTabSelected = label => {
     this.setState({ nav: label });
   };
-
+  // Sets default states for App
   state = {
     shouldHide: "true",
     image: "katter",
@@ -28,7 +29,7 @@ class App extends Component {
     poem: "vår",
     nav: "0"
   };
-
+  // Updates the state variable which determines if the dropdown menu is visible for mobile devices
   showHide = () => {
     this.setState({ shouldHide: !this.state.shouldHide });
   };
