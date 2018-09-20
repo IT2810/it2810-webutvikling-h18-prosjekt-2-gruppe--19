@@ -17,7 +17,11 @@ class App extends Component {
     }
   };
 
-  state = { shouldHide: "true", image: "katter", music: "gitar", poem: "vår" };
+  handleTabSelected = (label) => {
+    this.setState({ nav: label});
+  };
+
+  state = { shouldHide: "true", image: "katter", music: "gitar", poem: "vår", nav: "1" };
 
   showHide = () => {
     this.setState({ shouldHide: !this.state.shouldHide });
@@ -63,12 +67,18 @@ class App extends Component {
         </section>
 
         <section className="Art-section">
-          <NavBar />
+          <NavBar
+            onSelected={this.handleTabSelected}
+            label1="1"
+            label2="2"
+            label3="3"
+            label4="4"
+          />
           <Artboard
             image={this.state.image}
             music={this.state.music}
             poem={this.state.poem}
-            navbar="1"
+            navbar={this.state.nav}
           />
         </section>
       </div>

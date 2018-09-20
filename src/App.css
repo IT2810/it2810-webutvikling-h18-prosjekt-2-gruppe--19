@@ -27,8 +27,42 @@
 }
 
 .Tab-bar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.Tab input{
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0;
+}
+
+.Tab label{
+    line-height: 45px;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.Tab input[type="radio"]:checked + label {
+    background: grey;
+}
+
+.Tab {
+    color: black;
+    padding: 25px;
+    position: relative;
+}
+
+.Tab:hover:not(.active) {
+    background-color: lightgrey;
 }
 
 .Filters {
