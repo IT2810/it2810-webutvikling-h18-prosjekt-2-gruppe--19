@@ -1,4 +1,4 @@
-# Valg og løsninger med tanke på funksjonalitet:
+# Funksjonalitet
 
 ## Krav til innhold og funksjonalitet på websiden
 Brukeren skal kunne velge blant 3 kategorier av bilder, 3 kategorier av lyd og 3 kategorier av tekst, og basert på disse valgene få generert en utstilling med minimum 4 kombinasjoner av et bilde, en tekst og en lyd. Hver kombinasjon skal vises som separat side i et «tabs display» eller tilsvarende løsning som egner seg for å bla mellom de 4 kombinasjonene. Brukeren skal kunne endre på kategorivalgene og få en ny utstilling ved endring.
@@ -32,7 +32,7 @@ Du finner en skisse av en layout her
 
 
 
-# Valg og løsninger med tanke på teknologi:
+# Teknologi
 
 
 ## Krav til bruk av teknologi
