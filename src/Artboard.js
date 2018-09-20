@@ -93,7 +93,7 @@ class Artboard extends Component {
 		<div>
 
 			<h3>{ this.state.poem ? this.state.poem.title : 'Loading...' }</h3>
-			<p>By { this.state.poem ? this.state.poem.author : 'Loading...' }</p>
+			<p>Av { this.state.poem ? this.state.poem.author : 'Loading...' }</p>
 
 			<p>{ this.state.poem ? this.state.poem.poem : 'Loading...' }</p>
 
