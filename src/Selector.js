@@ -29,28 +29,33 @@ class Selector extends Component {
             <div>
               <input
                 type="radio"
-                id="radio1"
+                id={this.props.label1}
                 value={this.props.label1}
                 checked={this.state.value === this.props.label1}
                 onChange={this.handleChange}
               />
-              <label htmlFor="radio1">{this.props.label1}</label>
+              <label htmlFor={this.props.label1}>{this.props.label1}</label>
+            </div>
+            <div>
               <input
                 type="radio"
-                id="radio2"
+                id={this.props.label2}
                 value={this.props.label2}
                 checked={this.state.value === this.props.label2}
                 onChange={this.handleChange}
               />
-              <label htmlFor="radio2">{this.props.label2}</label>
+
+              <label htmlFor={this.props.label2}>{this.props.label2}</label>
+            </div>
+            <div>
               <input
                 type="radio"
-                id="radio3"
+                id={this.props.label3}
                 value={this.props.label3}
                 checked={this.state.value === this.props.label3}
                 onChange={this.handleChange}
               />
-              <label htmlFor="radio3">{this.props.label3}</label>
+              <label htmlFor={this.props.label3}>{this.props.label3}</label>
             </div>
           </fieldset>
         </form>

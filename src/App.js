@@ -38,13 +38,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">
-            Fantastisk gruppeutstilling av gruppe 19
-          </h1>
-          <div className="Settings-button" onClick={this.showHide}>
-            <span>{this.state.shouldHide ? "v" : "^"}</span>
-          </div>
+          <h1 className="App-title">En reise － i livet?</h1>
         </header>
+
+        <div className="Settings-button" onClick={this.showHide}>
+          <span>{this.state.shouldHide ? "v" : "^"}</span>
+        </div>
+        
 
         <section
           className="Filters"
