@@ -6,7 +6,7 @@ import Artboard from "./Artboard";
 
 class App extends Component {
   // Selector calls this method when a radio input is clicked and updates the relevant App states
-  handleSelected = (option, category) => {
+  selectHandler = (option, category) => {
     if (category === "image") {
       this.setState({ image: option });
     }
@@ -18,7 +18,7 @@ class App extends Component {
     }
   };
   // NavBar calls this method when a radio input is clicekd and updates the relevant App state
-  handleTabSelected = label => {
+  tabSelectHandler = label => {
     this.setState({ nav: label });
   };
   // Sets default states for App
@@ -44,28 +44,27 @@ class App extends Component {
         <div className="Settings-button" onClick={this.showHide}>
           <span>{this.state.shouldHide ? "v" : "^"}</span>
         </div>
-        
 
         <section
           className="Filters"
           className={this.state.shouldHide ? "hidden" : ""}
         >
           <Selector
-            onSelected={this.handleSelected}
+            onSelected={this.selectHandler}
             category="image"
             label1="katter"
             label2="hester"
             label3="krokodiller"
           />
           <Selector
-            onSelected={this.handleSelected}
+            onSelected={this.selectHandler}
             category="music"
             label1="gitar"
             label2="techno"
             label3="klassisk"
           />
           <Selector
-            onSelected={this.handleSelected}
+            onSelected={this.selectHandler}
             category="poem"
             label1="vår"
             label2="sommer"
@@ -75,7 +74,7 @@ class App extends Component {
 
         <section className="Art-section">
           <NavBar
-            onSelected={this.handleTabSelected}
+            onSelected={this.tabSelectHandler}
             label1="0"
             label2="1"
             label3="2"
