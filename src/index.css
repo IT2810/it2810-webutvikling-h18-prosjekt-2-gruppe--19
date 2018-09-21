@@ -1,9 +1,9 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  max-width: 1200px;
-  margin: auto;
-  background-color: rgb(240,236,224);
-  color: rgb(51,52,47);
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	max-width: 1200px;
+	margin: auto;
+	background-color: rgb(240,236,224);
+	color: rgb(51,52,47);
 }
