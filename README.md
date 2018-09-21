@@ -15,7 +15,7 @@ I state-objektet til App holder vi styr på hvilke bilde-, lyd-, og tekst-katego
 
 ### AJAX
 
-Både SVG-filene og tekstene lastes dynamisk med AJAX gjennom funksjonene loadSVG og loadJSON. Her benytter vi oss av jQuery biblioteket for innlasting. Lyd blir håndtert med HTML-5-taggen og det trengs dermed ingen implementasjon for håndtering av data. 
+Både SVG-filene og tekstene lastes dynamisk med AJAX gjennom funksjonene loadSVG og loadJSON.  Her benytter vi oss av jQuery bibliotekets AJAX funksjonalitet for innlasting. Filene lastes bare når kombinasjonen de blir brukt i vises. Lyd blir håndtert med HTML-5-taggen og det trengs dermed ingen implementasjon for håndtering av data. 
 
 ### RESPONSIVE WEB DESIGN
 
