@@ -7,13 +7,13 @@ import Artboard from "./Artboard";
 class App extends Component {
   // Selector calls this method when a radio input is clicked and updates the relevant App states
   selectHandler = (option, category) => {
-    if (category === "image") {
+    if (category === "bilde") {
       this.setState({ image: option });
     }
-    if (category === "music") {
+    if (category === "musikk") {
       this.setState({ music: option });
     }
-    if (category === "poem") {
+    if (category === "dikt") {
       this.setState({ poem: option });
     }
   };
@@ -51,21 +51,21 @@ class App extends Component {
         >
           <Selector
             onSelected={this.selectHandler}
-            category="image"
+            category="bilde"
             label1="katter"
             label2="hester"
             label3="krokodiller"
           />
           <Selector
             onSelected={this.selectHandler}
-            category="music"
+            category="musikk"
             label1="gitar"
             label2="techno"
             label3="klassisk"
           />
           <Selector
             onSelected={this.selectHandler}
-            category="poem"
+            category="dikt"
             label1="vår"
             label2="sommer"
             label3="vinter"
