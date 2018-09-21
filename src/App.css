@@ -1,3 +1,23 @@
+::selection {
+  background-color: tomato;
+  color: white;
+}
+::-moz-selection {
+  background-color: tomato;
+  color: white;
+}
+
+span {
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(51, 52, 47);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .App {
   text-align: center;
 }
@@ -6,71 +26,115 @@
   display: none;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
-  background-color: #222;
-  /*height: 150px;*/
+  /* background-color: rgb(51,52,47); */
   padding: 20px;
-  color: white;
+  padding-bottom: 0;
+  color: rgba(198, 73, 64, 1);
+  font-size: 2em;
 }
 
 .App-title {
   font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+  padding-bottom: 0;
 }
 
 .Tab-bar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.Tab input{
-    display: block;
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    opacity: 0;
+.Tab input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
 }
 
-.Tab label{
-    line-height: 45px;
-    display: block;
-    position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+.Tab label {
+  font-size: 2em;
+  line-height: 45px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-weight: bold;
 }
 
 .Tab input[type="radio"]:checked + label {
-    background: grey;
+  background-color: rgba(198, 73, 64, 1);
+  color: white;
 }
 
 .Tab {
-    color: black;
-    padding: 25px;
-    position: relative;
+  color: black;
+  padding: 25px;
+  position: relative;
 }
 
 .Tab:hover:not(.active) {
-    background-color: lightgrey;
+  background-color: rgba(198, 73, 64, 0.7);
 }
 
 .Filters {
   display: none;
+  background-color: rgb(51, 52, 47);
+}
+
+fieldset {
+  border: 2px solid rgba(198, 73, 64, 1);
+  background-color: rgba(51, 52, 47, 0.2);
+  margin: 0;
+  font-size: 1.1em;
+}
+
+fieldset div {
+  display: block;
+  /* text-alig: left; */
+}
+
+fieldset div input {
+  display: none;
+  text-align: left;
+}
+
+fieldset div input[type="radio"]:checked + label {
+  background-color: rgba(198, 73, 64, 1);
+  color: white;
+}
+
+fieldset legend {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+}
+
+.poem {
+  font-family: "Give You Glory", cursive;
+  font-size: 3em;
+  position: absolute;
+  background-color: rgba(198, 73, 64, 0.7);
+  max-width: 900px;
+  width: 100%;
+  color: rgb(240, 236, 224);
+}
+
+.Art-image {
+  width: 100%;
 }
 
 img {
   max-width: 100%;
+}
+
+audio {
+  margin: 20px auto 20px auto;
+  width: 90%;
 }
 
 form {
@@ -82,20 +146,23 @@ label {
   padding-right: 5px;
 }
 
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+header {
+  width: 100%;
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px) {
   .Filters {
     width: 300px;
+    background-color: rgb(51, 52, 47);
   }
 
   .App {
     display: grid;
     grid-template-columns: 300px 1fr;
+  }
+
+  .poem {
+    background-color: rgba(198, 73, 64, 1);
   }
 
   header {
@@ -109,9 +176,8 @@ label {
   .Filters {
     display: block;
   }
-  
+
   .hidden {
     display: block;
   }
-
 }

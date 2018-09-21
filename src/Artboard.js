@@ -96,15 +96,19 @@ class Artboard extends Component {
 	return (
 		<div>
 
-			<h3>{ this.state.poem ? this.state.poem.title : 'Loading...' }</h3>
-			<p>Av { this.state.poem ? this.state.poem.author : 'Loading...' }</p>
-
-			<p>{ this.state.poem ? this.state.poem.poem : 'Loading...' }</p>
-
+			{/* Livin' on the edge */}
+			
 			<audio controls id="player" src={ this.state.music ? this.state.music.path : 'Loading...' } type="audio/mpeg"></audio>
 
-			{/* Livin' on the edge */}
-			<div dangerouslySetInnerHTML={{ __html: this.state.imagexml }} />
+			<h3>{ this.state.poem ? this.state.poem.title : 'Loading...' }</h3>
+			<p>Av { this.state.poem ? this.state.poem.author : 'Loading...' }</p>
+			
+			<p className="poem">{ this.state.poem ? this.state.poem.poem : 'Loading...' }</p>
+
+			<div className="Art-image" dangerouslySetInnerHTML={{ __html: this.state.imagexml }} />
+
+
+
 		</div>
 		);
 	}
