@@ -3,7 +3,6 @@ import $ from 'jquery';
 
 class Artboard extends Component {
 
-
 	constructor(props) {
 		super(props);
 
@@ -15,11 +14,8 @@ class Artboard extends Component {
 			poem: null
 		}
 	}
-
-	mystatething(data2) {
-		this.setState(data2);
-	}
 	
+	// Load JSON files by AJAX
 	loadJson(path) {
 
 		$.ajax({
@@ -27,6 +23,7 @@ class Artboard extends Component {
 			dataType: "json",
 			cache: false,
 			success: function(data) {
+				// This function is called when data is loaded
 				this.updateState(data);
 			}.bind(this),
 			error: function(xhr, status, err) {
@@ -35,6 +32,7 @@ class Artboard extends Component {
 		});
 	}
 
+	// Load SVG files by AJAX
 	loadSVG(path) {
 
 		$.ajax({
@@ -60,6 +58,7 @@ class Artboard extends Component {
 		this.loadSVG(this.state.imagepath);
 	}
 
+	// Convert XML element to a string, so that it can be placed in the HTML 
 	SVGParse(xml) {
 		let element = new XMLSerializer().serializeToString(xml.documentElement);
 		this.setState({
@@ -67,7 +66,8 @@ class Artboard extends Component {
 		});
 	}
 
-	// http://jsfiddle.net/alnitak/hEsys/
+	// Using the prop strings as parameters in JSON traversal
+	// Source: http://jsfiddle.net/alnitak/hEsys/
 	byString(o, s) {
 		s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
 		s = s.replace(/^\./, '');           // strip a leading dot
@@ -88,6 +88,7 @@ class Artboard extends Component {
 		this.loadJson("art_assets.json");
 	}
 
+	// Run each time props change
 	componentWillReceiveProps() {
 		this.getData();
 	}
@@ -95,8 +96,6 @@ class Artboard extends Component {
 	render() {
 	return (
 		<div>
-
-			{/* Livin' on the edge */}
 			
 			<audio controls id="player" src={ this.state.music ? this.state.music.path : 'Loading...' } type="audio/mpeg"></audio>
 
@@ -105,10 +104,8 @@ class Artboard extends Component {
 			
 			<p className="poem">{ this.state.poem ? this.state.poem.poem : 'Loading...' }</p>
 
+			                         { /* Livin' on the edge */ }
 			<div className="Art-image" dangerouslySetInnerHTML={{ __html: this.state.imagexml }} />
-
-
-
 		</div>
 		);
 	}
