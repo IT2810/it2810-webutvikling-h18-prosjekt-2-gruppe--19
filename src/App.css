@@ -1,6 +1,16 @@
 ::selection { background-color: tomato; color: white;}
 ::-moz-selection { background-color: tomato; color: white;}
 
+span {
+  font-size: 50px;
+  font-weight: bold;
+  color:rgb(51,52,47);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 .App {
   text-align: center;
@@ -13,12 +23,14 @@
 .App-header {
   /* background-color: rgb(51,52,47); */
   padding: 20px;
+  padding-bottom: 0;
   color: rgba(198,73,64, 1);
   font-size: 2em;
 }
 
 .App-title {
   font-size: 1.5em;
+  padding-bottom: 0;
 }
 
 .Tab-bar {
